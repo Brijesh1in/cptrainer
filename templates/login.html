@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>User Login</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+		<!-- MATERIAL DESIGN ICONIC FONT -->
+		<link rel="stylesheet" href="{% static 'fonts/material-design-iconic-font/css/material-design-iconic-font.min.css' %}">
+
+		<!-- STYLE CSS -->
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+        <!-- <link rel="stylesheet" href="{% static 'css/style.scss' %}"> -->
+	</head>
+
+	<body>
+        <div class="wrapper" style="background: url('https://lh3.googleusercontent.com/ohXfK_gejGdGoxN7Vzf2hE9EWsvXhR9AnPlRqylsbhSFn1hU2pDZ4dkG8Q8Wj8cd4g9hVGShd2X7qBSTkbWiX-2UmhH44u_-M4xpO2nMBYsi0ymKeMpfZFOMWXtTJW28YdTjVquwquv9pTTCBFpTnG_C8euEUgO08mXO63oDcqIN9bmSvh5B8MUDw2MJ_oYAMJoCi8UeI9nvfs7z3UbcQQPNYHyXgi0wKW9aMmz8ogaRUPHf5Z7tKv9Am8my9XsleXNzeZjlTY7qobFffw5xwpNBUGNYdPWfkF-XWQyhrcJsESwGFHUlFDtVvU_V6IOgHA-jZmnmu8e3_wBA50VTO713U-DoDMjhZliK1qSUoR9FBxcPE7Z_O3kVk9v5qFUgwO2wmybVKDmH9gn55vDnBEiHCr-0cfKJgJHYlgIFm3fwguGYtIEpYK5ucGAxjz_NPcM5fw9BNQ-M67dyM5eY9Tdav198oMNTAJLKGmdaEG4v8UqRsxk5hyFhOWeufn6vuaG2TrxB9_kDR5gaYroneuDaYB9CySvKyXo_AmqA3po7mGl8W0HBphFHzOPkfFqyGdpTfeJNurtKuuV99cb57kHxwieMwWCPwUNRFzZwOByzNyfcPkeVMgy8z7tpYj6Eb9SUpt8Y-6j9-Qj9lfxnHJNTZ0CTzxvJ-N_Mwya-YA=w1135-h638-no');">
+			<div class="inner">
+				<div class="image-holder">
+					<img src="{% static 'images/bg-heading-03.jpg' %}" alt="">
+				</div>
+				<form action="" method="POST">
+                    {% csrf_token%}
+					<h3>Login Form</h3>
+					<div class="form-wrapper">
+						<input name="username" type="text" placeholder="Username" class="form-control">
+						<i class="zmdi zmdi-account"></i>
+                    </div>
+					<div class="form-wrapper">
+						<input password="password" type="password" placeholder="Password" class="form-control">
+						<i class="zmdi zmdi-lock"></i>
+					</div>
+					<div class="form-wrapper">
+						<input password="password" type="password" placeholder="Confirm Password" class="form-control">
+						<i class="zmdi zmdi-lock"></i>
+					</div>
+					<button type="submit">Login
+						<i class="zmdi zmdi-arrow-right"></i>
+                    </button>
+				</form>
+			</div>
+		</div>
+		
+	</body>
+</html>
